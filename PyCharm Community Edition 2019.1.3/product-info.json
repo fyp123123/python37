@@ -1,0 +1,15 @@
+{
+  "name": "PyCharm",
+  "version": "2019.1.4",
+  "buildNumber": "191.8026.44",
+  "productCode": "PC",
+  "svgIconPath": "bin/pycharm.svg",
+  "launch": [
+    {
+      "os": "Windows",
+      "launcherPath": "bin/pycharm64.exe",
+      "javaExecutablePath": "jre64/bin/java.exe",
+      "vmOptionsFilePath": "bin/pycharm64.exe.vmoptions"
+    }
+  ]
+}
