@@ -1,0 +1,57 @@
+ '''
+该目录用于存放公共配置，yaml文件以：为键值对的形式，：和值之间需要用空格分割，数组前面需要加‘-’,和值之间要用空格分割
+使用规则：使用缩进表示层级关系，缩进的空格数目不固定，只需要相同层级的元素左侧对齐；
+文件中的字符串不需要使用引号标注，但若字符串包含有特殊字符则需用引号标注
+ '''
+
+project_name: 花乐达项目
+env: 测试环境
+test_name: fyp123123
+
+#域名
+host: http://h5.ydidc.com
+
+#实时更新用例内容，False时已生成的代码不会做变更
+#True 时，修改yaml文件的用例时，代码会实时更新
+real_time_update_test_case: False
+
+#报告发送的类型，0：不发送 1：钉钉 2：企业微信 3：邮箱 4：飞书
+notification_type: 0
+
+#收集失败的测试用例，生成Excel发送到企业微信的开关
+excel_report: False
+
+#钉钉相关配置
+ding_talk:
+  webhook: https://oapi.dingtalk.com/robot/send?access_token=4c82d5ca29bece137479047d686345e80ce9b8347cf8446c843dac4a27d60c7e
+  secret: SECd1d4223b54bcfbd3c90acbba305e186143603997dc83caaffcd0049c1641335f
+
+#数据库相关配置
+mysql_db:
+  #数据库开关
+  switch: False
+  host: localhost
+  user: root
+  password: '123456'
+  port: 3306
+
+#镜像源地址
+mirror_source: http://mirrors.aliyun.com/pypi/simple/
+
+#企业通知相关配置
+
+wechat:
+  webhook: https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=caa24f05-38dc-4c64-8020-a409f1be14ec
+
+#邮箱配置
+email:
+  send_user: 2419427904@qq.com  #发送方
+  email_host: smtp.qq.com
+  stamp_key: cjyjfgeeaenxdiia
+  send_list: 2419427904@qq.com  #接收方
+
+#飞书配置
+lark:
+  webhook:
+
+
