@@ -1,0 +1,37 @@
+#公共参数
+case_common:
+  allureEpic: 花了达接口
+  alluerFeature: 优惠券模块
+  alluerStory: 领取优惠券接口
+
+coupon_receive_01:
+  host: ${{host()}}
+  url: /api/mall/coupon/receive
+  method: POST
+  detail: 登录领取优惠券
+  headers:
+    content-type: application/json;charset=UTF-8
+    tenantId: 0000
+    Authorization: Bearer
+  #请求的数据是JSON，params，data，file
+  requestType: json
+  #是否执行，为空或者true都会执行
+  is_run:
+  #bady参数
+  data:
+    couponId: 89
+  #是否有关联数据
+  dependence_case: True
+  #依赖的数据
+  dapendence_case_data:
+    #所关联的用例id
+    - case_id:
+      #关联的数据来源和类型reponse,requests
+      dependent_data:
+        - dependent_type: response
+          #提取的对象
+          json_path: $.data.token
+          #替换到哪
+          replace_key: $.headers.Authorization
+
+
